@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors, extracted from the logo artwork (see /brand/process_logo.py) */
+  --color-navy: #0a2342;
+  --color-navy-dark: #071830;
+  --color-teal: #0f9eae;
+  --color-teal-light: #4fc0cb;
+  /* Darker teal for text on light backgrounds — #0f9eae only reaches ~3.2:1
+     against white, below WCAG AA (4.5:1) for normal-size text. */
+  --color-teal-text: #0b7682;
+  --color-paper: #ffffff;
+  --color-mist: #f6f7f9;
+  --color-line: #e3e7ec;
+  --color-ink: #17202b;
+  --color-ink-soft: #5b6672;
+
+  --font-sans: var(--font-noto-sans-jp), var(--font-inter), sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 3px;
+}
