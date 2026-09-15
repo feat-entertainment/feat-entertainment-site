@@ -20,9 +20,10 @@ feat.Entertainment合同会社のコーポレートサイト。Next.js (App Rout
 
 ## ロゴ・ブランド素材
 
-- `brand/feat.Entertainment-Logo-source.png` … 元ロゴ(未加工)。編集不可・改変禁止の原本。
-- `brand/process_logo.py`, `brand/make_favicons_og.py` … 元ロゴから `public/images/logo-*.png` ・ `app/icon.png` / `app/apple-icon.png` ・ `public/og-image.png` を生成したPythonスクリプト(Pillow使用)。ロゴを差し替える際はソース画像を置き換えて再実行する。
-- ロゴ抽出カラー: Navy `#0a2342` / Teal `#0f9eae`(`app/globals.css` の `@theme` で定義)。
+- `brand/feat.Entertainment-Logo-v2.ai` … 現行ロゴの原本(Illustrator、PDF互換)。案1〜3のロゴ案・アプリアイコン案が1ページにまとまったコンプシート。**採用しているのは「案3」**(2026-09-15、ユーザー指定)。
+- `brand/feat.Entertainment-Logo-v2-reference.pdf` … 上記の見た目確認用の書き出し(低解像度)。
+- `brand/extract_logo.py` … `.ai`から案3部分を切り出し、サイトのNavy/Teal(下記)に再配色して `public/images/logo-*.png` ・ `app/icon.png` / `app/apple-icon.png` ・ `public/og-image.png` を生成するPythonスクリプト(`pip install pymupdf pillow numpy`)。**注意**: スクリプト内のクロップ座標はこのコンプシートのレイアウトに固定値で合わせてあるため、`.ai`のレイアウトが変わったら座標を測り直す必要がある。
+- ブランドカラー: Navy `#0a2342` / Teal `#0f9eae`(`app/globals.css` の `@theme` で定義)。**注意**: `.ai`ファイル自体のカラースウォッチ表記はNavy `#002063` / Teal `#08979c` とやや異なるが、サイトは既存配色を維持する方針(2026-09-15確認済み)。ロゴ画像はこのサイト配色に合わせて再配色して書き出している。
 
 ## 未実装・仮実装
 

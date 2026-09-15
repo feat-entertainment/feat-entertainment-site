@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="border-t border-line bg-white py-14">
       <Container>
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col items-start gap-4">
             <Logo variant="mark" theme="navy" className="h-8 w-auto" />
             <div>
               <p className="text-sm font-semibold text-navy">{siteConfig.name}</p>
