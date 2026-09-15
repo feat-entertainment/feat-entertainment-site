@@ -11,7 +11,7 @@ export function WorksSection() {
         <SectionHeading
           eyebrow="Works"
           title="これまでの取り組み。"
-          lead="今後、アプリ・AIサービス・音楽・映像などの実績もここに加えていきます。"
+          lead="今後、AIサービス・音楽・映像などの実績もここに加えていきます。"
         />
 
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -11,6 +11,14 @@ export type WorkItem = {
  */
 export const workItems: WorkItem[] = [
   {
+    id: "kosodate-baton",
+    category: "App",
+    title: "こそだてバトン",
+    description:
+      "ママが不在の「もしも」に、パパが迷わず対応できる育児情報共有アプリ。",
+    href: "https://kosodate-baton.feat-entertainment.com/",
+  },
+  {
     id: "game-guide-sites",
     category: "Game",
     title: "ゲームアプリ攻略サイト運営",

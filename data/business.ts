@@ -34,7 +34,7 @@ export const businessDomains: BusinessDomain[] = [
       "技術そのものではなく、技術が生む「少しの便利」を届ける領域です。",
     threads: [
       { label: "AIを活用したサービス", status: "next" },
-      { label: "アプリ開発", status: "next" },
+      { label: "アプリ開発", status: "now" },
       { label: "Webサービス", status: "next" },
     ],
   },
