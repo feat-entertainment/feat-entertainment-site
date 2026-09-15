@@ -92,11 +92,11 @@ export function ContactSection() {
             </div>
 
             <div className="flex flex-col gap-2">
-              <label htmlFor="company" className="text-sm font-medium text-navy">
+              <label htmlFor="company-name" className="text-sm font-medium text-navy">
                 会社名<span className="text-ink-soft font-normal"> 任意</span>
               </label>
               <input
-                id="company"
+                id="company-name"
                 name="company"
                 type="text"
                 autoComplete="organization"

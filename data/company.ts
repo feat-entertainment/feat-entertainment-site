@@ -20,7 +20,4 @@ export const companyRows: CompanyRow[] = [
       "その他、暮らしを豊かにする事業",
     ],
   },
-  { label: "代表者", value: "" },
-  { label: "所在地", value: "" },
-  { label: "設立", value: "" },
 ];
