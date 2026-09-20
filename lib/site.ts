@@ -5,5 +5,5 @@ export const siteConfig = {
   title: "feat.Entertainment合同会社 | 暮らしを少し、もっと豊かに。",
   description:
     "feat.Entertainment合同会社は、ゲーム、AI、アプリ、音楽、映像などを通じて、人の暮らしを少し豊かにするサービスをつくる会社です。",
-  contactEmail: "feat.entertainment.llc@gmail.com",
+  contactEmail: "info@feat-entertainment.com",
 } as const;
