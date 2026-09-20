@@ -6,12 +6,12 @@ type LogoTheme = "navy" | "white";
 
 const SOURCES: Record<LogoVariant, Record<LogoTheme, { src: string; width: number; height: number }>> = {
   mark: {
-    navy: { src: "/images/logo-mark-navy.png", width: 406, height: 148 },
-    white: { src: "/images/logo-mark-white.png", width: 405, height: 144 },
+    navy: { src: "/images/logo-mark-navy.png", width: 900, height: 311 },
+    white: { src: "/images/logo-mark-white.png", width: 900, height: 311 },
   },
   full: {
-    navy: { src: "/images/logo-full-navy.png", width: 477, height: 220 },
-    white: { src: "/images/logo-full-white.png", width: 477, height: 220 },
+    navy: { src: "/images/logo-full-navy.png", width: 900, height: 427 },
+    white: { src: "/images/logo-full-white.png", width: 900, height: 427 },
   },
 };
 

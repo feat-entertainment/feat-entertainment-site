@@ -48,7 +48,7 @@ export function Hero() {
           <div className="w-full max-w-2xl py-4 sm:py-6">
             <div
               className="relative w-full overflow-hidden"
-              style={{ aspectRatio: "406 / 148" }}
+              style={{ aspectRatio: "900 / 311" }}
             >
               <Image
                 src="/images/logo-mark-navy.png"

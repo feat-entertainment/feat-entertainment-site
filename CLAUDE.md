@@ -20,10 +20,13 @@ feat.Entertainment合同会社のコーポレートサイト。Next.js (App Rout
 
 ## ロゴ・ブランド素材
 
-- `brand/feat.Entertainment-Logo-v2.ai` … 現行ロゴの原本(Illustrator、PDF互換)。案1〜3のロゴ案・アプリアイコン案が1ページにまとまったコンプシート。**採用しているのは「案3」**(2026-09-15、ユーザー指定)。
-- `brand/feat.Entertainment-Logo-v2-reference.pdf` … 上記の見た目確認用の書き出し(低解像度)。
-- `brand/extract_logo.py` … `.ai`から案3部分を切り出し、サイトのNavy/Teal(下記)に再配色して `public/images/logo-*.png` ・ `app/icon.png` / `app/apple-icon.png` ・ `public/og-image.png` を生成するPythonスクリプト(`pip install pymupdf pillow numpy`)。**注意**: スクリプト内のクロップ座標はこのコンプシートのレイアウトに固定値で合わせてあるため、`.ai`のレイアウトが変わったら座標を測り直す必要がある。
-- ブランドカラー: Navy `#0a2342` / Teal `#0f9eae`(`app/globals.css` の `@theme` で定義)。**注意**: `.ai`ファイル自体のカラースウォッチ表記はNavy `#002063` / Teal `#08979c` とやや異なるが、サイトは既存配色を維持する方針(2026-09-15確認済み)。ロゴ画像はこのサイト配色に合わせて再配色して書き出している。
+- **現行ロゴ画像の元データ**: `brand/feat.Entertainment-Logo-v3.svg`(2026-09-20にユーザー提供、ネイティブベクター)。`public/images/logo-*.png` ・ `public/og-image.png` ・ `app/icon.png` / `app/apple-icon.png` は全てこれが元になっている。
+  - 生成手順: `node brand/render_svg.mjs`(SVGを高解像度ラスタに書き出し。要 `npm install --no-save playwright && npx playwright install chromium`)→ `python brand/extract_logo_v3.py`(切り出し・書き出し。要 `pip install pillow numpy`)。
+  - **色はこのSVGの原色をそのまま使用**(インク Near-black `#231f20` / アクセント Teal `#08979d` 付近。2026-09-20にユーザー指示で「ロゴ画像のみ原色・サイトUIは現状維持」と明示決定)。Navy背景用の白版(`logo-*-white.png`)はこのSVGに存在しないため、インク色を白に置き換えて自前で派生させている。
+  - favicon(`app/icon.png` / `app/apple-icon.png`)もこのSVGの白背景アプリアイコンパネルをそのまま使用(2026-09-20追加指示)。**旧版の紺塗り背景ではなく、白背景+濃色アウトラインの角丸アイコンに変わった**(このSVGに紺塗り版が無いため)。
+  - **注意**: スクリプト内のクロップ座標(`WORDMARK_BOX` / `TEXT_GAP_Y` / `APP_ICON_BOX`)はこのSVG固有のレイアウトに合わせた固定値。ロゴを再度差し替える場合は座標を測り直す必要がある。
+- `brand/feat.Entertainment-Logo-v2.ai` / `feat.Entertainment-Logo-v2-reference.pdf` / `extract_logo.py` … 一つ前(2026-09-15版)のロゴ原本一式(Illustrator、案1〜3のコンプシート)。現在は不使用だが参考として残置。
+- サイトUIのブランドカラー: Navy `#0a2342` / Teal `#0f9eae`(`app/globals.css` の `@theme` で定義)。ボタン・見出し・Philosophyセクション背景などはこちらを使用し、ロゴ画像本体の色とは意図的に別管理。
 
 ## 未実装・仮実装
 
