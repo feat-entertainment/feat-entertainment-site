@@ -28,6 +28,16 @@ feat.Entertainment合同会社のコーポレートサイト。Next.js (App Rout
 - `brand/feat.Entertainment-Logo-v2.ai` / `feat.Entertainment-Logo-v2-reference.pdf` / `extract_logo.py` … 一つ前(2026-09-15版)のロゴ原本一式(Illustrator、案1〜3のコンプシート)。現在は不使用だが参考として残置。
 - サイトUIのブランドカラー: Navy `#0a2342` / Teal `#0f9eae`(`app/globals.css` の `@theme` で定義)。ボタン・見出し・Philosophyセクション背景などはこちらを使用し、ロゴ画像本体の色とは意図的に別管理。
 
+## サイト写真(About/Business/Philosophy/Works)
+
+2026-09-20のビジュアルリニューアルで追加。ロゴと同じ「`brand/` = 原本、`public/images/` = 生成物」の2層構成。
+
+- 原本: `brand/photos/{about-life,business-entertainment,life-community}.png`、`brand/photos/kosodate-baton/{06-info-card,09-memo,10-share}.png`(こそだてバトンの実機スクリーンショット。**加工・生成・改変は禁止**、そのままWebP変換のみ)。
+- 生成スクリプト: `python brand/process_photos.py`(要 `pip install pillow`、インストール済み)。`public/images/photos/*.webp` と `public/images/works/kosodate-baton/*.webp` を出力する。
+- `life-community.png` の左上に生成AIツールの小さなウォーターマーク風アイコンが写り込んでいるため、全てのクロップでこの角(概ね x<110 かつ y<100)を除外している。同じ画像を Business「03 Life & Community」(近めインセット)と Philosophy(横長フルブリード背景)の2箇所で**別のクロップ・別の役割**として使用している点に注意(同じ切り方を繰り返さない)。
+- このプロジェクトは `output: "export"` + `images: { unoptimized: true }` のため `next/image` の自動リサイズ/srcset生成は効かない。レスポンシブ画像が必要な場合は `process_photos.py` に解像度違いの出力を追加し、`<picture>`で手動配信する必要がある(未対応)。
+- こそだてバトンの3画面コンポジット(`components/sections/works/KosodateBatonShowcase.tsx`)は表示する3画面(情報カード/聞きたいことメモ/共有)が固定でハードコードされている。表示画面を変える場合はこのコンポーネントと`brand/photos/kosodate-baton/`を両方更新する。
+
 ## 未実装・仮実装
 
 - お問い合わせフォームの送信は現状モック(`lib/contact.ts`)。実送信先は未接続。

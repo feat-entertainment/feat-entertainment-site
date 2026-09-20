@@ -43,7 +43,7 @@ export const businessDomains: BusinessDomain[] = [
     title: "Life & Community",
     titleJa: "暮らし / 不動産 / 地域課題",
     description:
-      "不動産や空き家問題など、暮らしと社会を支える領域です。",
+      "住まい、地域、空き家活用など、暮らしの土台を支える領域として、これから挑戦していきたいと考えています。",
     threads: [
       { label: "暮らしを支えるサービス", status: "next" },
       { label: "不動産", status: "next" },

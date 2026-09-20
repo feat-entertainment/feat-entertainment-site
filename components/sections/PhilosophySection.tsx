@@ -1,10 +1,22 @@
+import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { Container } from "@/components/ui/Container";
 
 export function PhilosophySection() {
   return (
     <section className="relative bg-navy py-28 sm:py-40 overflow-hidden">
-      <Container>
+      <Image
+        src="/images/photos/life-banner.webp"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-linear-to-b from-navy/90 via-navy/85 to-navy/90"
+      />
+      <Container className="relative">
         <div className="flex flex-col items-center gap-10 text-center">
           <Reveal>
             <span

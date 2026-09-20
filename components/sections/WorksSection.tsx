@@ -2,9 +2,12 @@ import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
+import { KosodateBatonShowcase } from "@/components/sections/works/KosodateBatonShowcase";
 import { workItems } from "@/data/works";
 
 export function WorksSection() {
+  const otherWorks = workItems.filter((work) => work.id !== "kosodate-baton");
+
   return (
     <section id="works" className="py-24 sm:py-32 bg-mist scroll-mt-20">
       <Container>
@@ -14,8 +17,12 @@ export function WorksSection() {
           lead="今後、AIサービス・音楽・映像などの実績もここに加えていきます。"
         />
 
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {workItems.map((work, index) => {
+        <div className="mt-16">
+          <KosodateBatonShowcase />
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {otherWorks.map((work, index) => {
             const content = (
               <>
                 <span className="text-xs font-semibold tracking-[0.2em] uppercase text-teal-text">
