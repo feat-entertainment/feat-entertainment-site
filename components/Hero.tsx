@@ -45,17 +45,17 @@ export function Hero() {
             私たちは、あなたの毎日を少しだけ豊かにする共演者です。
           </motion.p>
 
-          <div className="w-full max-w-2xl py-4 sm:py-6">
+          <div className="w-full max-w-lg py-4 sm:py-6">
             <div
               className="relative w-full overflow-hidden"
-              style={{ aspectRatio: "900 / 311" }}
+              style={{ aspectRatio: "900 / 427" }}
             >
               <Image
-                src="/images/logo-mark-navy.png"
-                alt="feat.Entertainment ロゴマーク:人を表す紺色の丸から、共演者を意味するfへ、そして少し豊かになった未来を表すターコイズの丸へと続く一本の線"
+                src="/images/logo-full-navy.png"
+                alt="feat.Entertainment ロゴ:人を表す紺色の丸から、共演者を意味するfへ、そして少し豊かになった未来を表すターコイズの丸へと続く一本の線と、feat.Entertainmentのロゴタイプ"
                 fill
                 priority
-                sizes="(min-width: 640px) 640px, 100vw"
+                sizes="(min-width: 640px) 512px, 100vw"
                 className="object-contain object-left"
               />
               {!reduceMotion ? (

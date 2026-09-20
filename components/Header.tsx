@@ -44,7 +44,7 @@ export function Header() {
             className="flex items-center gap-2 rounded-sm"
             aria-label="feat.Entertainment合同会社 トップへ"
           >
-            <Logo variant="mark" theme="navy" priority className="h-8 sm:h-9 w-auto" />
+            <Logo variant="full" theme="navy" priority className="h-10 sm:h-12 w-auto" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8" aria-label="メインナビゲーション">
