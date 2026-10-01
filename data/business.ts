@@ -17,13 +17,13 @@ export const businessDomains: BusinessDomain[] = [
   {
     id: "entertainment",
     title: "Entertainment",
-    titleJa: "ゲーム / 音楽 / 映像",
+    titleJa: "ブログ / 音楽 / 映像",
     description:
       "遊びや物語を通じて、日常にちょっとした彩りを届ける領域です。",
     threads: [
-      { label: "ゲーム攻略サイト運営", status: "now" },
-      { label: "音楽", status: "next" },
-      { label: "映像", status: "next" },
+      { label: "ブログ運営", status: "now" },
+      { label: "音楽", status: "now" },
+      { label: "映像", status: "now" },
     ],
   },
   {

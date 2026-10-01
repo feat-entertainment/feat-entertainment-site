@@ -1,11 +1,11 @@
-import { Gamepad2, Cpu, Home } from "lucide-react";
+import { Sparkles, Cpu, Home } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { businessDomains } from "@/data/business";
 
 const ICONS = {
-  entertainment: Gamepad2,
+  entertainment: Sparkles,
   technology: Cpu,
   life: Home,
 } as const;
