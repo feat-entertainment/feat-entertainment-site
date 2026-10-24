@@ -1,6 +1,6 @@
 # 引継書 — feat-entertainment-site リニューアル(2026-09-13〜09-20)
 
-対象: `E:\Claude\apps\feat-entertainment-site`(feat.Entertainment合同会社のコーポレートサイト)
+対象: `A:\Claude\apps\feat-entertainment-site`(feat.Entertainment合同会社のコーポレートサイト)
 
 ## 1. 何をしたか(概要)
 
